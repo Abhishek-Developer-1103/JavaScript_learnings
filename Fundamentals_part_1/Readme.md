@@ -83,6 +83,36 @@ let is block scope we can reassign the value but cannot redecalre it.
 const is block scope  cannot reassign and Redeclare. 
 
 
+<!--Operators-->
+Transform values or Combine values 
+Mathematical and Logical Operations
+
+<!-- opertor precedence -->
+order of operations which operator will operate first  
+Multiplication (*) and division (/) have higher precedence than addition (+) and subtraction (-).
+
+
+
+
+
+<!-- strings and template literals  -->
+
+string is a Sequence of character which we used to create Sentence 
+
+<!-- template literals  -->
+introduced in Es6, are a modern way to work with strings in javascirpt to make our life simple
+
+
+
+<!-- conditionals  -->
+To perform any actions based on the decision we use if and else statements. 
+
+
+
+
+
+
+
 
 
 

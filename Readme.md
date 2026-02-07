@@ -243,3 +243,20 @@ if (score >= 50) {
 } else {
   result = "Fail";
 }
+
+
+
+<!-- Strict Mode  -->
+we use to avoid accidental bugs and erros.
+
+
+
+<!-- Functions -->
+Fucntions in JavaScript are reusable blocks of code designed to perform specific tasks. They allow you to organize, reuse and modularize code .It can take inpust,perform actions, and return outputs.
+
+
+So When to Use What?
+
+Use function declarations for main logic
+
+Use function expressions when assigning to variables or passing into other functions

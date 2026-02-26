@@ -100,12 +100,13 @@ document.querySelector('.again').addEventListener('click',function(){
 // first we grab teh value and then match the secret number 
 // lets store the html elements in the variable.
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let highScore = 0;
 let score = 20;
 console.log(secretNumber)
 const check = document.querySelector('.check');
 const message = document.querySelector('.message');
 const again = document.querySelector('.again');
-let number = document.querySelector('.number');
+let num = document.querySelector('.number');
 // console.log(check,message,again,number)
 
 
@@ -123,14 +124,41 @@ check.addEventListener('click',function(){
         message.textContent = '🚫 No Number!!';
     }
     else if(secretNumber === guess){
-     message.textContent = "🎉 Correct Number!!"
+     message.textContent = "🎉 Correct Number!!";
+     document.querySelector('body').style.backgroundColor = "#60b347";
+     num.textContent = secretNumber;
+     num.style.width = "30rem";
+     if(score > highScore){
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
+     }
+     
+     
     }
     else if(guess !== secretNumber){
       if(score>=1)
      message.textContent = guess > secretNumber ? "📈 Too High" : "📉 Too Low";
-     
+    score--;
+    document.querySelector('.score').textContent = score;
+    }else{
+      message.textContent = "You Lost !!"
     }
 });
+
+
+
+// resetting the game 
+
+again.addEventListener('click',function(){
+  secretNumber = Math.trunc(Math.random() * 20 ) + 1;
+  console.log(secretNumber)
+  score = 20;
+  num.textContent = '?';
+  document.querySelector('.guess').value = "";
+  document.querySelector('body').style.backgroundColor = "#222"
+  num.style.width = "15rem";
+  message.textContent = "start Guessing!!!!"
+})
 
 
 
